@@ -9,13 +9,12 @@ if (isset($_GET["controller"])) {
 launchAction($controllerObj);
 function loadController($controller)
 {
-    $strFileController = 'controller/conferencesContrgit oller.php';
+    $strFileController = 'controller/conferencesController.php';
     require_once $strFileController;
     $controllerObj = new conferencesController();
     return $controllerObj;
 }
-function launchAction($controllerObj)
-kkk
+function launchAction($controllerObj){
     if (isset($_GET["action"])) {
         $controllerObj->run($_GET["action"]);
     } else {

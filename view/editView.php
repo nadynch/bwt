@@ -85,11 +85,13 @@
 
                         marker = new google.maps.Marker({
                             position: latlng,
+                            map: map,
                             title: "Latitude:" + position[0] + " | Longitude:" + position[1]
                         });
 
-                        if (x.value == null || y.value == null)
+                        if(x.value == '' && y.value =='')
                             marker.setMap(null);
+                        else marker.setMap(map);
 
                         google.maps.event.addDomListener(map, 'click', function (event) {
                             var result = [event.latLng.lat(), event.latLng.lng()];
