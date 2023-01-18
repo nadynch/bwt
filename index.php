@@ -15,7 +15,7 @@ function loadController($controller)
     return $controllerObj;
 }
 function launchAction($controllerObj)
-kk
+kkk
     if (isset($_GET["action"])) {
         $controllerObj->run($_GET["action"]);
     } else {
